@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="generator" content="quarto-0.9.105">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="This Workshop is hosted by NASA LP DAAC and JPL with support from NASA Openscapes.">
+  <title>2022 ECOSTRESS Cloud Workshop</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+
+  <script src="site_libs/quarto-nav/quarto-nav.js"></script>
+  <script src="site_libs/quarto-nav/headroom.min.js"></script>
+  <script src="site_libs/clipboard/clipboard.min.js"></script>
+  <meta name="quarto:offset" content="./">
+  <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+  <script src="site_libs/quarto-search/fuse.min.js"></script>
+  <script src="site_libs/quarto-search/quarto-search.js"></script>
+  <link href="./cloud-paradigm.html" rel="next">
+  <script src="site_libs/quarto-html/quarto.js"></script>
+  <script src="site_libs/quarto-html/popper.min.js"></script>
+  <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+  <script src="site_libs/quarto-html/anchor.min.js"></script>
+  <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+  <link class="quarto-color-scheme" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <link class="quarto-color-scheme quarto-color-alternate" rel="prefetch" href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css">
+  <script src="site_libs/bootstrap/bootstrap.min.js"></script>
+  <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+  <link class="quarto-color-scheme" href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link class="quarto-color-scheme quarto-color-alternate" rel="prefetch" href="site_libs/bootstrap/bootstrap-dark.min.css">
+  <script id="quarto-search-options" type="application/json">{
+    "location": "navbar",
+    "copy-button": false,
+    "collapse-after": 2,
+    "panel-placement": "end",
+    "type": "overlay",
+    "limit": 20,
+    "language": {
+      "search-no-results-text": "No results",
+      "search-matching-documents-text": "matching documents",
+      "search-copy-link-title": "Copy link to search",
+      "search-hide-matches-text": "Hide additional matches",
+      "search-more-match-text": "more match in this document",
+      "search-more-matches-text": "more matches in this document",
+      "search-clear-button-title": "Clear",
+      "search-detached-cancel-button-title": "Cancel",
+      "search-submit-button-title": "Submit"
+    }
+  }</script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="docked">
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">2022 ECOSTRESS Cloud Workshop</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-menu">    
+        <li class="dropdown-header">Welcome</li>
+        <li>
+    <a class="dropdown-item" href="./index.html">
+ <span class="dropdown-text">2022 ECOSTRESS Cloud Workshop</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./cloud-paradigm.html">
+ <span class="dropdown-text">NASA and the Cloud Paradigm</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./schedule.html">
+ <span class="dropdown-text">Schedule</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./prerequisites/index.html">
+ <span class="dropdown-text">Prerequisites</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Tutorials</li>
+        <li>
+    <a class="dropdown-item" href="./tutorials/index.html">
+ <span class="dropdown-text">Tutorials Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tutorials/Earthdata_search.html">
+ <span class="dropdown-text">Earthdata Search Client</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tutorials/Getting_started_setup.html">
+ <span class="dropdown-text">Getting Started</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tutorials/Intro_xarray_hvplot.html">
+ <span class="dropdown-text">Introduction to xarray</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./how-tos/authentication/NASA_Earthdata_Authentication.html">
+ <span class="dropdown-text">NASA Earthdata Authentication - Create netrc file</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./how-tos/authentication/NASA_Earthdata_Login_Token.html">
+ <span class="dropdown-text">NASA Earthdata Authentication - Generate EDL Token</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tutorials/Data_Discovery_CMR_API_EDL_Token.html">
+ <span class="dropdown-text">Data Discovery - Finding Data with the CMR API</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./how-tos/data_access/Earthdata_Cloud__Single_File__Direct_S3_Access_Clip_COG_Example.html">
+ <span class="dropdown-text">Data Access - Direct S3 Access of Cloud Optimized GeoTIFF (COG) file</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tutorials/Comparing_TNC_Tree_Data_to_ECOSTRESS.html">
+ <span class="dropdown-text">User Case - Comparing TNC Tree Data to ECOSTRESS</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Additional Resources</li>
+        <li>
+    <a class="dropdown-item" href="./how-tos/additional_resources/Earthdata_Cloud__Single_File__HTTPS_Access_COG_Example.html">
+ <span class="dropdown-text">Accessing Cloud Optimized GeoTIFF (COG) - HTTPS Example</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./how-tos/additional_resources/Earthdata_Cloud__Single_File__Direct_S3_Access_NetCDF4_Example.html">
+ <span class="dropdown-text">Accessing a NetCDF4/HDF5 File - S3 Direct Access</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./how-tos/additional_resources/Multi-File_Direct_S3_Access_COG_Example.html">
+ <span class="dropdown-text">Multi-File_Direct_S3_Access_COG_Example.html</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./how-tos/additional_resources/Multi-File_Direct_S3_Access_NetCDF_Example.html">
+ <span class="dropdown-text">Accessing Multiple NetCDF4/HDF5 Files - S3 Direct Access</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./how-tos/additional_resources/Earthdata_Cloud__Data_Access_OPeNDAP_Example.html">
+ <span class="dropdown-text">Using OPeNDAP to Access Data from On-Prem and Earthdata Cloud Archives</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/NASA-Openscapes/2022-ECOSTRESS-Cloud-Workshop"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">2022 ECOSTRESS Cloud Workshop</h1>
+      <button type="button" class="quarto-btn-toggle btn">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./">
+      <img src="./img/ecostress_lpdaac_image.jpg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-welcome" aria-expanded="true">Welcome</a>
+      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-welcome" aria-expanded="true">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-welcome" class="collapse list-unstyled sidebar-section depth1 show">  
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">2022 ECOSTRESS Cloud Workshop</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cloud-paradigm.html" class="sidebar-item-text sidebar-link">NASA and the Cloud Paradigm</a>
+  </div>
+</li>
+    </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./schedule.html" class="sidebar-item-text sidebar-link">Schedule</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prerequisites/index.html" class="sidebar-item-text sidebar-link">Prerequisites</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-tutorials" aria-expanded="false">Tutorials</a>
+      <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-tutorials" aria-expanded="false">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-tutorials" class="collapse list-unstyled sidebar-section depth1 ">  
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tutorials/index.html" class="sidebar-item-text sidebar-link">Tutorials Overview</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tutorials/Earthdata_search.html" class="sidebar-item-text sidebar-link">Earthdata Search Client</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tutorials/Getting_started_setup.html" class="sidebar-item-text sidebar-link">Getting Started</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tutorials/Intro_xarray_hvplot.html" class="sidebar-item-text sidebar-link">Introduction to xarray</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./how-tos/authentication/NASA_Earthdata_Authentication.html" class="sidebar-item-text sidebar-link">NASA Earthdata Authentication - Create netrc file</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./how-tos/authentication/NASA_Earthdata_Login_Token.html" class="sidebar-item-text sidebar-link">NASA Earthdata Authentication - Generate EDL Token</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tutorials/Data_Discovery_CMR_API_EDL_Token.html" class="sidebar-item-text sidebar-link">Data Discovery - Finding Data with the CMR API</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./how-tos/data_access/Earthdata_Cloud__Single_File__Direct_S3_Access_Clip_COG_Example.html" class="sidebar-item-text sidebar-link">Data Access - Direct S3 Access of Cloud Optimized GeoTIFF (COG) file</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tutorials/Comparing_TNC_Tree_Data_to_ECOSTRESS.html" class="sidebar-item-text sidebar-link">User Case - Comparing TNC Tree Data to ECOSTRESS</a>
+  </div>
+</li>
+    </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-additional-resources" aria-expanded="false">Additional Resources</a>
+      <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-additional-resources" aria-expanded="false">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-additional-resources" class="collapse list-unstyled sidebar-section depth1 ">  
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./how-tos/additional_resources/Earthdata_Cloud__Single_File__HTTPS_Access_COG_Example.html" class="sidebar-item-text sidebar-link">Accessing Cloud Optimized GeoTIFF (COG) - HTTPS Example</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./how-tos/additional_resources/Earthdata_Cloud__Single_File__Direct_S3_Access_NetCDF4_Example.html" class="sidebar-item-text sidebar-link">Accessing a NetCDF4/HDF5 File - S3 Direct Access</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./how-tos/additional_resources/Multi-File_Direct_S3_Access_COG_Example.html" class="sidebar-item-text sidebar-link">Multi-File_Direct_S3_Access_COG_Example.html</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./how-tos/additional_resources/Multi-File_Direct_S3_Access_NetCDF_Example.html" class="sidebar-item-text sidebar-link">Accessing Multiple NetCDF4/HDF5 Files - S3 Direct Access</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./how-tos/additional_resources/Earthdata_Cloud__Data_Access_OPeNDAP_Example.html" class="sidebar-item-text sidebar-link">Using OPeNDAP to Access Data from On-Prem and Earthdata Cloud Archives</a>
+  </div>
+</li>
+    </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+<h2 id="toc-title">On this page</h2>
+<ul>
+<li><a href="#welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a></li>
+<li><a href="#about" class="nav-link" data-scroll-target="#about">About</a>
+<ul class="collapse">
+<li><a href="#workshop-goal" class="nav-link" data-scroll-target="#workshop-goal">Workshop Goal</a></li>
+<li><a href="#workshop-description" class="nav-link" data-scroll-target="#workshop-description">Workshop Description</a></li>
+<li><a href="#workshop-outcomes" class="nav-link" data-scroll-target="#workshop-outcomes">Workshop Outcomes</a></li>
+</ul></li>
+<li><a href="#acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+</ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/NASA-Openscapes/2022-ECOSTRESS-Cloud-Workshop/edit/main/index.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/NASA-Openscapes/2022-ECOSTRESS-Cloud-Workshop/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<header id="title-block-header" class="quarto-title-block default">
+
+
+
+<div class="quarto-title"><h1 class="title d-none d-lg-block display-7">2022 ECOSTRESS Cloud Workshop</h1><p class="subtitle lead">Finding, accessing &amp; analyzing ECOSTRESS data hosted in Earthdata Cloud</p></div><div class="quarto-title-meta"><div><div class="quarto-title-meta-heading">Author</div><div class="quarto-title-meta-contents"><div class="quarto-title-authors"><p>This Workshop is hosted by NASA LP DAAC and JPL with support from NASA Openscapes.</p></div></div></div></div></header>
+
+<section id="welcome" class="level2">
+<h2 class="anchored" data-anchor-id="welcome">Welcome</h2>
+<p><img src="img/ecostress_banner.jpg" class="img-fluid"></p>
+<p>Welcome to the <strong>2022 ECOSTRESS Cloud Workshop</strong> hosted by NASA’s Land Processes Distributed Activate Archive (<a href="https://lpdaac.usgs.gov/">LP DAAC</a>) with support from <a href="https://nasa-openscapes.github.io/">NASA Openscapes</a>.</p>
+<p><strong>The workshop will take place virtually daily on April 12 and 13, 2022 from 2pm-5:30pm PST <a href="https://www.timeanddate.com/time/zones/pdt">(UTC-7)</a></strong>.</p>
+</section>
+<section id="about" class="level2">
+<h2 class="anchored" data-anchor-id="about">About</h2>
+<section id="workshop-goal" class="level3">
+<h3 class="anchored" data-anchor-id="workshop-goal">Workshop Goal</h3>
+<p>The goal of the workshop is expose ECOSTRESS data users to ECOSTRESS version 2 (v2) data products in the cloud. Learning objectives focus on how to find and access ECOSTRESS v2 data from Earthdata Cloud either by downloading or accessing the data on the cloud. The LP DAAC is the NASA archive for ECOSTRESS data products. ECOSTRESS v2 data products will hosted in the NASA Earthdata Cloud, hosted in AWS.</p>
+</section>
+<section id="workshop-description" class="level3">
+<h3 class="anchored" data-anchor-id="workshop-description">Workshop Description</h3>
+<p>The goal of the workshop is expose ECOSTRESS data users to ECOSTRESS version 2 data products in the cloud. Learning objectives focus on how to finda and access ECOSTRESS version 2 data from Earthdata Cloud either by downloading or accessing the data on the cloud. The LP DAAC is the NASA archive for ECOSTRESS data products. ECOSTRESS version 2 data products will hosted in the NASA Earthdata Cloud, hosted in AWS.</p>
+<p>The workshop will demonstrate how to find, access, and download ECOSTRESS v2 data from the Earthdata Cloud. Participants will learn how to search for and download data from NASA’s Earthdata Search Client, a graphical user interface (GUI) for search, discovery, and download application for also EOSDIS data assets. Participants will also learn how to perform in-could data search, access, and processing routines where no data download is required, and data analysis can take place next to the data in the cloud.</p>
+</section>
+<section id="workshop-outcomes" class="level3">
+<h3 class="anchored" data-anchor-id="workshop-outcomes">Workshop Outcomes</h3>
+<p>At the end of the two days, participants should be able to find and access ECOSTRESS v2 data in the NASA Earthdata Cloud (hosted in AWS). Workshop materials will be available for future reference following the completion of the workshop/ECOSTRESS Science Team meeting</p>
+<blockquote class="blockquote">
+<p><strong>NOTE:</strong> ECOSTRESS v2 data will only be available to approved individuals. Please work with Christine Lee (christine.m.lee@jpl.nasa.gov) to have your name added to the allowlist.</p>
+</blockquote>
+</section>
+</section>
+<section id="acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>2022 ECOSTRESS Cloud Workshop is hosted by NASA’s LP DAAC with support from the NASA Openscapes Project, with cloud computing infrastructure by 2i2c.</p>
+
+
+</section>
+</main> <!-- /main -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+    } else {
+      disableStylesheet(alternateStylesheets);
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    setTimeout(function() {
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./cloud-paradigm.html" class="pagination-link">
+        <span class="nav-page-text">NASA and the Cloud Paradigm</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">LPDAAC &amp; JPL (2022). 2022 ECOSTRESS Cloud Workshop</div>
+  </div>
+</footer>
+
+
+</body></html>
