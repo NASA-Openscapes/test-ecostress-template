@@ -1,0 +1,74 @@
+project: 
+  type: website
+
+website:
+  title: "2022 ECOSTRESS Cloud Workshop"
+  site-url: https://nasa-openscapes.github.io/2022-ECOSTRESS-Cloud-Workshop/
+  repo-url: https://github.com/NASA-Openscapes/2022-ECOSTRESS-Cloud-Workshop
+  repo-actions: [edit, issue]
+  page-navigation: true
+  page-footer: "LPDAAC & JPL (2022). 2022 ECOSTRESS Cloud Workshop"
+ 
+  navbar: 
+    background: primary
+    right: 
+      - sidebar:welcome
+      - icon: github
+        href: https://github.com/NASA-Openscapes/2022-ECOSTRESS-Cloud-Workshop
+ 
+  sidebar:
+    - id: welcome
+      title: "Menu"
+      logo: img/ecostress_lpdaac_image.jpg
+      style: "docked"
+      collapse-level: 1
+      align: left
+      contents:
+        - section: "Welcome"
+          contents:
+            - index.md
+            - cloud-paradigm.md
+        - schedule.md
+        - prerequisites/index.md 
+        - section: "Tutorials"
+          contents: 
+            - tutorials/index.md
+            - href: tutorials/Earthdata_search.md
+              text: "Earthdata Search Client"
+            - href: tutorials/Getting_started_setup.md
+              text: "Getting Started"
+            - href: tutorials/Intro_xarray_hvplot.ipynb
+              text: "Introduction to xarray"
+            - href: how-tos/authentication/NASA_Earthdata_Authentication.ipynb
+              text: "NASA Earthdata Authentication - Create netrc file"
+            - href: how-tos/authentication/NASA_Earthdata_Login_Token.ipynb
+              text: "NASA Earthdata Authentication - Generate EDL Token"
+            - href: tutorials/Data_Discovery_CMR_API_EDL_Token.ipynb 
+              text: "Data Discovery - Finding Data with the CMR API"
+            - href: how-tos/data_access/Earthdata_Cloud__Single_File__Direct_S3_Access_Clip_COG_Example.ipynb
+              text: "Data Access - Direct S3 Access of Cloud Optimized GeoTIFF (COG) file"
+            - href: tutorials/Comparing_TNC_Tree_Data_to_ECOSTRESS.ipynb
+              text: "User Case - Comparing TNC Tree Data to ECOSTRESS"
+        - section: "Additional Resources"
+          contents:
+            - tutorials/Data_Discovery_CMR-STAC_API.ipynb
+            - how-tos/additional_resources/Earthdata_Cloud__Single_File__HTTPS_Access_COG_Example.ipynb
+            - how-tos/additional_resources/Earthdata_Cloud__Single_File__Direct_S3_Access_NetCDF4_Example.ipynb
+            - how-tos/additional_resources/Multi-File_Direct_S3_Access_COG_Example.ipynb
+            - how-tos/additional_resources/Multi-File_Direct_S3_Access_NetCDF_Example.ipynb
+            - how-tos/additional_resources/Earthdata_Cloud__Data_Access_OPeNDAP_Example.ipynb
+            
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: [cosmo, theme-dark.scss]
+    code-background: true
+    code-copy: true
+    css: styles.css
+    toc: true
+
+filters:
+  - include-files.lua
+  - quarto
